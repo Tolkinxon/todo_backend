@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Todo list</title>
+</head>
+<body class="">
+    <div class="container d-flex flex-column justify-content-center   align-items-center">
+        <div class="filters-wrapper mb-3 mt-3">
+            <button class="js-all btn btn-outline-secondary">all</button>
+            <button class="js-completed btn btn-outline-success">completed</button>
+            <button class="js-uncompleted btn btn-outline-danger">uncompleted</button>
+        </div>
+
+            <input  class="w-25 js-input form-control mb-3" type="text">
+
+            <div class="js-todo-list todo-list w-50 border border-1 border-primary p-3 rounded overflow-auto" style="height: 330px;">
+            <template class="js-todo-item-template">
+                <li class="d-flex align-items-center justify-content-between mb-1">
+                    <input class="js-checkbox" type="checkbox">
+                    <p  class="js-title w-100 m-0 ps-2">hello</p>
+                    <div class="d-flex gap-1">
+                        <button class="js-edit-btn btn btn-warning">edit</button>
+                        <button class="js-delete-btn btn btn-danger">delete</button>
+                    </div>
+                </li>
+            </template>
+        </div>
+ 
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" referrerpolicy="no-referrer"></script>
+    <script src="./../js/todo.js"></script>
+</body>
+</html>
