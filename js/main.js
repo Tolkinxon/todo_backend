@@ -23,9 +23,13 @@ elSignUp.addEventListener('submit', (evt) => {
         body: JSON.stringify(newUser)
     });
     const data = await res.json();
+    console.log(data);
+    
     if(data.token) {
         localStorage.setItem('token', data.token);
         window.location = '/html/index.html'
+    } else {
+        alert(data.message)
     }
     }
     signupfetching();
@@ -46,9 +50,13 @@ elLogin.addEventListener('submit', (evt) => {
             body: JSON.stringify(loginUser)
         });
         const data = await res.json();
+        console.log(data);
+        
         if(data.token) {
             localStorage.setItem('token', data.token);
             window.location = '/html/index.html'
+        } else {
+            alert(data.message)
         }
     }
     loginFetching();
